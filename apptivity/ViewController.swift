@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  apptivity
+//  MackerelAppActivity
 //
 //  Created by pokutuna on 2015/11/14.
 //  Copyright © 2015年 pokutuna. All rights reserved.
