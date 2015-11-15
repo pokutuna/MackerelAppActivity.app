@@ -30,7 +30,7 @@ class ApptivityConfig {
     static let configFileName = ".mackerel-app-activity.json"
     static let requiredKeys = ["ApiKey", "ServiceName", "MetricPrefix"]
     static let defaultPostIntervalMinutes = 1
-    
+
     var configJson: JSON = nil
     var apiKey: String {
         get { return self.configJson["ApiKey"].stringValue }
@@ -57,7 +57,7 @@ class ApptivityConfig {
         case RequiredParameterInsufficient(message: String)
         case NameMappingError(message: String)
     }
-    
+
     init () throws {
         let path = (NSHomeDirectory() as NSString)
             .stringByAppendingPathComponent(ApptivityConfig.configFileName)
@@ -74,7 +74,7 @@ class ApptivityConfig {
         
         self.configJson = json
     }
-    
+
     func validateJson(config: JSON) throws {
         // required keys
         for key in ApptivityConfig.requiredKeys {
@@ -92,7 +92,7 @@ class ApptivityConfig {
             }
         }
     }
-    
+
     func getMappedName(bundleName: String) -> String {
         if let name = self.nameMapping[bundleName] {
             return name.stringValue

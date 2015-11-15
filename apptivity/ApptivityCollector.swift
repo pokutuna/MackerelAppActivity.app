@@ -9,12 +9,12 @@
 import Cocoa
 
 class ApptivityCollector: NSObject {
-    
+
     static let defaultBundleName = "_none_"
-    
+
     var counter: Dictionary<String, Int> = [String:Int]() // BundleName:KeyDowns
     var currentBundleName: String = ApptivityCollector.defaultBundleName
-    
+
     let workspace: NSWorkspace = NSWorkspace.sharedWorkspace()
     var keyDownHandler: AnyObject?
 
@@ -23,7 +23,7 @@ class ApptivityCollector: NSObject {
         initAppSwitch()
         initGlobalKeyDown()
     }
-    
+
     func initAppSwitch() {
         self.workspace.notificationCenter.addObserver(
             self,
@@ -32,7 +32,7 @@ class ApptivityCollector: NSObject {
             object: nil
         )
     }
-    
+
     func onSwitchApp() {
         var bundleName = ApptivityCollector.defaultBundleName
         if let app = self.workspace.frontmostApplication {
@@ -42,23 +42,23 @@ class ApptivityCollector: NSObject {
         }
         self.currentBundleName = bundleName
     }
-    
+
     func initGlobalKeyDown() {
         self.keyDownHandler = NSEvent.addGlobalMonitorForEventsMatchingMask(
             NSEventMask.KeyDownMask,
             handler: { (ev: NSEvent) in self.onKeyDown(ev) }
         )
     }
-    
+
     func onKeyDown(event: NSEvent) {
         let bundleName = self.currentBundleName
         if let count = self.counter[bundleName] {
-          self.counter.updateValue(count + 1, forKey: bundleName)
+            self.counter.updateValue(count + 1, forKey: bundleName)
         } else {
             self.counter[bundleName] = 1
         }
     }
-    
+
     func fetchAndFlush() -> Dictionary<String, Int> {
         let dict = self.counter
         self.counter = [String:Int]()
@@ -75,7 +75,7 @@ class ApptivityCollector: NSObject {
             }
         }
     }
-    
+
     deinit {
         self.workspace.notificationCenter.removeObserver(self)
         if let h = self.keyDownHandler { NSEvent.removeMonitor(h) }

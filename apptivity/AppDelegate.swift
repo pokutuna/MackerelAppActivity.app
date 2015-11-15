@@ -15,20 +15,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var config: ApptivityConfig?
     var collector: ApptivityCollector?
     var mackerel: MackerelClient?
-    
+
     var timer: NSTimer?
-    
+
     var requestErrorCount = 0
     static let thresholdCountToExit = 5
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-    
+
     override init() {
 
         let menu = NSMenu()
         self.statusItem.title = "ま"
         self.statusItem.menu = menu
-        
+
         let menuItem = NSMenuItem()
         menuItem.title = "Quit"
         menuItem.action = Selector("quit:")
@@ -42,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
+
         do {
             self.config = try ApptivityConfig.init()
         } catch {
@@ -68,11 +68,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var metrics: Array<Dictionary<String, AnyObject>> = []
         for (bundleName, keyDowns) in activity {
             let metricAppName = self.config!.getMappedName(bundleName)
-            
+
             // when a metric name is empty, it will not be sent
             if !metricAppName.isEmpty {
                 let metricName: String = self.config!.metricPrefix + metricAppName
-                metrics.append([ "name:": metricName, "value": keyDowns, "time": epoch ])
+                metrics.append([ "name": metricName, "value": keyDowns, "time": epoch ])
             }
         }
         return metrics
@@ -83,7 +83,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let nowEpoch = Int(NSDate().timeIntervalSince1970)
         let metrics = self.activityCounterToMackerelMetrics(activity, epoch: nowEpoch)
         guard metrics.count > 0 else { return }
-        
+
         self.mackerel!.postServiceMetric(self.config!.serviceName, metrics: metrics) { error in
             self.onFailPost(error, failedActivity: activity)
         }
@@ -105,11 +105,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(aNotification: NSNotification) {}
     
     func errorAlert(message: String) {
-        
+
         if self.timer?.valid != nil {
             timer!.invalidate()
         }
-        
+
         let alert = NSAlert()
         alert.messageText = "Error in MackerelAppActivity"
         alert.alertStyle = NSAlertStyle.CriticalAlertStyle
@@ -119,4 +119,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.quit(alert.buttons[0])
     }
 }
-
