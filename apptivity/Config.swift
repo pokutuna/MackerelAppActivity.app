@@ -11,12 +11,11 @@ import SwiftyJSON
 
 extension String {
     func isSafeNameForAppActivity() -> Bool {
-        // bundleIdentifier -> metric name([a-zA-Z0-9._-]+)
-        if self.isEmpty { return false }
+        // bundleIdentifier -> metric name([a-zA-Z0-9._-]*)
         if self.rangeOfString(" ") != nil { return false }
         
         let regex = try! NSRegularExpression(
-            pattern: "^[a-zA-Z0-9._-]+$",
+            pattern: "^[a-zA-Z0-9._-]*$",
             options: [.CaseInsensitive]
         )
         return regex.firstMatchInString(

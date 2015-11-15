@@ -22,24 +22,24 @@ class MackerelClient {
         return [ "X-Api-Key": self.apiKey, "Content-Type": "application/json" ]
     }
     
-    func postServiceMetric(serviceName: String, nameValue: Dictionary<String, Int>, epoch: Int) -> Bool {
+    func postServiceMetric(serviceName: String, metrics: Array<Dictionary<String, AnyObject>>, onError: ((ErrorType) -> Void)?) {
         let path = String(format: "/api/v0/services/%@/tsdb", serviceName)
-        
-        var metricValues: Array<Dictionary<String, AnyObject>> = []
-        for (k, v) in nameValue {
-            metricValues.append([ "name": k, "value": v, "time": epoch ])
-        }
-        
-        let request = NSMutableURLRequest(URL: NSURL(string: MackerelClient.host + path)!)
+                let request = NSMutableURLRequest(URL: NSURL(string: MackerelClient.host + path)!)
         request.HTTPMethod = "POST"
         for (k,v) in self.requestHeader() {
             request.setValue(v, forHTTPHeaderField: k)
         }
-        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(metricValues, options: [])
         
-        let response = Alamofire.request(request).validate().response
-        print(response)
-        return response?.statusCode == 200 ? true : false
+        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(metrics, options: [])
+        
+        Alamofire.request(request)
+            .validate()
+            .responseJSON { res in
+                switch res.result {
+                case .Failure(let error): onError?(error)
+                default: break
+                }
+            }
     }
 
 

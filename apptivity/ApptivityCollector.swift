@@ -57,16 +57,15 @@ class ApptivityCollector: NSObject {
         } else {
             self.counter[bundleName] = 1
         }
-        print(bundleName + ":" + String(self.counter[bundleName]))
     }
     
     func fetchAndFlush() -> Dictionary<String, Int> {
         let dict = self.counter
         self.counter = [String:Int]()
-        print("fetche & flush")
         return dict
     }
-    
+
+    // for restore
     func mergeCounter(dict: Dictionary<String, Int>) {
         for (k, v) in dict {
             if let keyDowns = self.counter[k] {

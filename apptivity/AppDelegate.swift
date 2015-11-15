@@ -14,12 +14,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var config: ApptivityConfig?
     var collector: ApptivityCollector?
     var mackerel: MackerelClient?
+    
+    var requestErrorCount = 0
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         do {
             self.config = try ApptivityConfig.init()
         } catch {
-            print(error)
+            print(error) // TODO show error & exit application
         }
         self.collector = ApptivityCollector.init()
         self.mackerel  = MackerelClient.init(apiKey: self.config!.apiKey)
@@ -36,35 +38,37 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
     }
     
+    func activityCounterToMackerelMetrics(activity: Dictionary<String, Int>, epoch: Int) -> Array<Dictionary<String,AnyObject>> {
+        var metrics: Array<Dictionary<String, AnyObject>> = []
+        for (bundleName, keyDowns) in activity {
+            let metricAppName = self.config!.getMappedName(bundleName)
+            
+            // when a metric name is empty, it will not be sent
+            if !metricAppName.isEmpty {
+                let metricName: String = self.config!.metricPrefix + metricAppName
+                metrics.append([ "name:": metricName, "value": keyDowns, "time": epoch ])
+            }
+        }
+        return metrics
+    }
+    
     func postToMackerel() {
         let activity = self.collector!.fetchAndFlush()
-        
-        let epoch = Int(NSDate().timeIntervalSince1970)
-        let prefix = self.config!.metricPrefix
-        var metrics: Dictionary<String, Int> = [:]
-        for (bundleName, keyDowns) in activity {
-            let key = prefix + config!.getMappedName(bundleName)
-            metrics[key] = keyDowns
-        }
-        
+        let nowEpoch = Int(NSDate().timeIntervalSince1970)
+        let metrics = self.activityCounterToMackerelMetrics(activity, epoch: nowEpoch)
         guard metrics.count > 0 else { return }
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let isSuccess = self.mackerel!.postServiceMetric(
-                self.config!.serviceName,
-                nameValue: metrics,
-                epoch: epoch
-            )
-            if !isSuccess {
-                dispatch_sync(dispatch_get_main_queue()) {
-                    self.onFailPost(activity)
-                }
+        self.mackerel!.postServiceMetric(self.config!.serviceName, metrics: metrics) { error in
+            // hack for ignoring a offline error
+            if (error as NSError).domain != "NSURLErrorDomain" {
+                self.requestErrorCount += 1
             }
+            self.onFailPost(activity)
         }
     }
     
     func onFailPost(failedActivity: Dictionary<String,Int>) {
-        print("post failed!")
+        self.collector!.mergeCounter(failedActivity)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
