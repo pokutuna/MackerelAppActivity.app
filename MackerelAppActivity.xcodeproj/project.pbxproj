@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3FEC8D36AE0E35A769CBE97D /* Pods_MackerelAppActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1CD0538EB4D3DD13FC6F19 /* Pods_MackerelAppActivity.framework */; };
 		B65961EC1BF779DD00B9C15F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961EB1BF779DD00B9C15F /* AppDelegate.swift */; };
-		B65961EE1BF779DD00B9C15F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961ED1BF779DD00B9C15F /* ViewController.swift */; };
 		B65961F01BF779DD00B9C15F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65961EF1BF779DD00B9C15F /* Assets.xcassets */; };
 		B65961F31BF779DD00B9C15F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65961F11BF779DD00B9C15F /* Main.storyboard */; };
 		B65961FB1BF77B2400B9C15F /* ApptivityCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */; };
@@ -23,7 +22,6 @@
 		86C5B8715AB47BF6369F3301 /* Pods-MackerelAppActivity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MackerelAppActivity.release.xcconfig"; path = "Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity.release.xcconfig"; sourceTree = "<group>"; };
 		B65961E81BF779DD00B9C15F /* MackerelAppActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MackerelAppActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65961EB1BF779DD00B9C15F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B65961ED1BF779DD00B9C15F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B65961EF1BF779DD00B9C15F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B65961F21BF779DD00B9C15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B65961F41BF779DD00B9C15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				B65961EB1BF779DD00B9C15F /* AppDelegate.swift */,
 				B65961FE1BF7AFE500B9C15F /* MackerelClient.swift */,
 				B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */,
-				B65961ED1BF779DD00B9C15F /* ViewController.swift */,
 				B6ABC7B61BF874B500CE64B0 /* Config.swift */,
 				B65961EF1BF779DD00B9C15F /* Assets.xcassets */,
 				B65961F11BF779DD00B9C15F /* Main.storyboard */,
@@ -215,7 +212,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65961EE1BF779DD00B9C15F /* ViewController.swift in Sources */,
 				B65961FF1BF7AFE500B9C15F /* MackerelClient.swift in Sources */,
 				B6ABC7B71BF874B500CE64B0 /* Config.swift in Sources */,
 				B65961FB1BF77B2400B9C15F /* ApptivityCollector.swift in Sources */,
