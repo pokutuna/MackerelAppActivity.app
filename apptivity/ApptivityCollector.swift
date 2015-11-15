@@ -10,10 +10,10 @@ import Cocoa
 
 class ApptivityCollector: NSObject {
     
-    static let defaultAppName = "_none_"
+    static let defaultBundleName = "_none_"
     
-    var counter: Dictionary<String, Int> = [String:Int]() // AppName:KeyDowns
-    var currentAppName: String = ApptivityCollector.defaultAppName
+    var counter: Dictionary<String, Int> = [String:Int]() // BundleName:KeyDowns
+    var currentBundleName: String = ApptivityCollector.defaultBundleName
     
     let workspace: NSWorkspace = NSWorkspace.sharedWorkspace()
     var keyDownHandler: AnyObject?
@@ -34,13 +34,13 @@ class ApptivityCollector: NSObject {
     }
     
     func onSwitchApp() {
-        var appName = ApptivityCollector.defaultAppName
+        var bundleName = ApptivityCollector.defaultBundleName
         if let app = self.workspace.frontmostApplication {
             if let bi = app.bundleIdentifier {
-                appName = bi.characters.split(".").last.flatMap(String.init)!
+                bundleName = bi.characters.split(".").last.flatMap(String.init)!
             }
         }
-        self.currentAppName = appName
+        self.currentBundleName = bundleName
     }
     
     func initGlobalKeyDown() {
@@ -51,19 +51,30 @@ class ApptivityCollector: NSObject {
     }
     
     func onKeyDown(event: NSEvent) {
-        let appName = self.currentAppName
-        if let count = self.counter[appName] {
-          self.counter.updateValue(count + 1, forKey: appName)
+        let bundleName = self.currentBundleName
+        if let count = self.counter[bundleName] {
+          self.counter.updateValue(count + 1, forKey: bundleName)
         } else {
-            self.counter[appName] = 1
+            self.counter[bundleName] = 1
         }
-        print(appName + ":" + String(self.counter[appName]))
+        print(bundleName + ":" + String(self.counter[bundleName]))
     }
     
     func fetchAndFlush() -> Dictionary<String, Int> {
         let dict = self.counter
         self.counter = [String:Int]()
+        print("fetche & flush")
         return dict
+    }
+    
+    func mergeCounter(dict: Dictionary<String, Int>) {
+        for (k, v) in dict {
+            if let keyDowns = self.counter[k] {
+                self.counter.updateValue(keyDowns + v, forKey: k)
+            } else {
+                self.counter[k] = v
+            }
+        }
     }
     
     deinit {

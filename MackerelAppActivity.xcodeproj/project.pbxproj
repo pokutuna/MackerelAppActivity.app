@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FEC8D36AE0E35A769CBE97D /* Pods_MackerelAppActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1CD0538EB4D3DD13FC6F19 /* Pods_MackerelAppActivity.framework */; };
 		B65961EC1BF779DD00B9C15F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961EB1BF779DD00B9C15F /* AppDelegate.swift */; };
 		B65961EE1BF779DD00B9C15F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961ED1BF779DD00B9C15F /* ViewController.swift */; };
 		B65961F01BF779DD00B9C15F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65961EF1BF779DD00B9C15F /* Assets.xcassets */; };
 		B65961F31BF779DD00B9C15F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65961F11BF779DD00B9C15F /* Main.storyboard */; };
 		B65961FB1BF77B2400B9C15F /* ApptivityCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */; };
 		B65961FF1BF7AFE500B9C15F /* MackerelClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961FE1BF7AFE500B9C15F /* MackerelClient.swift */; };
+		B6ABC7B71BF874B500CE64B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC7B61BF874B500CE64B0 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1CD0538EB4D3DD13FC6F19 /* Pods_MackerelAppActivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MackerelAppActivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C514D0D57BF9B2CF843FB3 /* Pods-MackerelAppActivity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MackerelAppActivity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity.debug.xcconfig"; sourceTree = "<group>"; };
+		86C5B8715AB47BF6369F3301 /* Pods-MackerelAppActivity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MackerelAppActivity.release.xcconfig"; path = "Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity.release.xcconfig"; sourceTree = "<group>"; };
 		B65961E81BF779DD00B9C15F /* MackerelAppActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MackerelAppActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65961EB1BF779DD00B9C15F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65961ED1BF779DD00B9C15F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		B65961F41BF779DD00B9C15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptivityCollector.swift; sourceTree = "<group>"; };
 		B65961FE1BF7AFE500B9C15F /* MackerelClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MackerelClient.swift; sourceTree = "<group>"; };
+		B6ABC7B61BF874B500CE64B0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FEC8D36AE0E35A769CBE97D /* Pods_MackerelAppActivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AFAB7691B4B2118835ECE88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65C514D0D57BF9B2CF843FB3 /* Pods-MackerelAppActivity.debug.xcconfig */,
+				86C5B8715AB47BF6369F3301 /* Pods-MackerelAppActivity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B65961DF1BF779DC00B9C15F = {
 			isa = PBXGroup;
 			children = (
 				B65961EA1BF779DD00B9C15F /* apptivity */,
 				B65961E91BF779DD00B9C15F /* Products */,
+				9AFAB7691B4B2118835ECE88 /* Pods */,
+				CE7D0C9E05432F51BBD6E249 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +78,20 @@
 				B65961FE1BF7AFE500B9C15F /* MackerelClient.swift */,
 				B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */,
 				B65961ED1BF779DD00B9C15F /* ViewController.swift */,
+				B6ABC7B61BF874B500CE64B0 /* Config.swift */,
 				B65961EF1BF779DD00B9C15F /* Assets.xcassets */,
 				B65961F11BF779DD00B9C15F /* Main.storyboard */,
 				B65961F41BF779DD00B9C15F /* Info.plist */,
 			);
 			path = apptivity;
+			sourceTree = "<group>";
+		};
+		CE7D0C9E05432F51BBD6E249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F1CD0538EB4D3DD13FC6F19 /* Pods_MackerelAppActivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B65961F71BF779DD00B9C15F /* Build configuration list for PBXNativeTarget "MackerelAppActivity" */;
 			buildPhases = (
+				BAB303A300109768D687E367 /* Check Pods Manifest.lock */,
 				B65961E41BF779DD00B9C15F /* Sources */,
 				B65961E51BF779DD00B9C15F /* Frameworks */,
 				B65961E61BF779DD00B9C15F /* Resources */,
+				9307B9F94E8D88C65AE505BA /* Embed Pods Frameworks */,
+				13288AD8D6D89CCB45D08439 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +162,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13288AD8D6D89CCB45D08439 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9307B9F94E8D88C65AE505BA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB303A300109768D687E367 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B65961E41BF779DD00B9C15F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +217,7 @@
 			files = (
 				B65961EE1BF779DD00B9C15F /* ViewController.swift in Sources */,
 				B65961FF1BF7AFE500B9C15F /* MackerelClient.swift in Sources */,
+				B6ABC7B71BF874B500CE64B0 /* Config.swift in Sources */,
 				B65961FB1BF77B2400B9C15F /* ApptivityCollector.swift in Sources */,
 				B65961EC1BF779DD00B9C15F /* AppDelegate.swift in Sources */,
 			);
@@ -240,6 +319,7 @@
 		};
 		B65961F81BF779DD00B9C15F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C514D0D57BF9B2CF843FB3 /* Pods-MackerelAppActivity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -252,6 +332,7 @@
 		};
 		B65961F91BF779DD00B9C15F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C5B8715AB47BF6369F3301 /* Pods-MackerelAppActivity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
