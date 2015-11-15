@@ -11,21 +11,21 @@ Inspired from http://songmu.github.io/slides/mackerel-3/#0
 
 TODO
 
-### `~/.mackerel-app-activity.json`
+### Put `~/.mackerel-app-activity.json`
 
 ```js
 {
-    "ApiKey": "hogehogefugafugapiyopiyo", // your api key
+    "ApiKey": "hogehogefugafugapiyopiyo",
     "ServiceName": "clients", // your service name
-    "MetricPrefix": "activity.types.", // set graph group name
+    "MetricPrefix": "activity.types.", // set a graph name prefix
 
-    // A default metric name is last part of `BundlerIdentifier`.
-    // (e.g `com.pokutuna.MackerelAppActivity` -> `MackerelAppActivity`)
-    // Define mappings if you want to rename a metric name
+    // A default metric name is the last part of `BundlerIdentifier`.
+    //   (e.g `com.pokutuna.MackerelAppActivity` -> `MackerelAppActivity`)
+    // Define mappings if you want to rename metric
     "NameMapping": {
         "slackmacgap": "Slack",
         "LimeChat-AppStore": "LimeChat",
-        "keychainaccess": "" // Set an empty string to avoid posting as metric
+        "keychainaccess": "" // Set an empty string to avoid posting
     },
 
     "PostIntervalMinutes": 1
