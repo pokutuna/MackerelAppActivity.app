@@ -13,7 +13,7 @@ extension String {
     func isSafeNameForAppActivity() -> Bool {
         // bundleIdentifier -> metric name([a-zA-Z0-9._-]*)
         if self.rangeOfString(" ") != nil { return false }
-        
+
         let regex = try! NSRegularExpression(
             pattern: "^[a-zA-Z0-9._-]*$",
             options: [.CaseInsensitive]
@@ -27,7 +27,7 @@ extension String {
 
 class ApptivityConfig {
 
-    static let configFileName = ".mackerel-app-activity.json" // TODO to plist
+    static let configFileName = ".mackerel-app-activity.json"
     static let requiredKeys = ["ApiKey", "ServiceName", "MetricPrefix"]
     static let defaultPostIntervalMinutes = 1
     

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,21 +16,46 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var collector: ApptivityCollector?
     var mackerel: MackerelClient?
     
+    var timer: NSTimer?
+    
     var requestErrorCount = 0
+    static let thresholdCountToExit = 5
 
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    
+    override init() {
+
+        let menu = NSMenu()
+        self.statusItem.title = "ま"
+        self.statusItem.menu = menu
+        
+        let menuItem = NSMenuItem()
+        menuItem.title = "Quit"
+        menuItem.action = Selector("quit:")
+        menu.addItem(menuItem)
+
+        super.init()
+    }
+    
+    @IBAction func quit(sender: NSButton) {
+        NSApplication.sharedApplication().terminate(self)
+    }
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        
         do {
             self.config = try ApptivityConfig.init()
         } catch {
-            print(error) // TODO show error & exit application
+            self.errorAlert("Config." + String(error))
         }
         self.collector = ApptivityCollector.init()
         self.mackerel  = MackerelClient.init(apiKey: self.config!.apiKey)
+
         self.runTimer()
     }
     
     func runTimer() {
-        NSTimer.scheduledTimerWithTimeInterval(
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(
             Double(self.config!.postIntervalMinutes * 60),
             target: self,
             selector: "postToMackerel",
@@ -59,20 +85,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         guard metrics.count > 0 else { return }
         
         self.mackerel!.postServiceMetric(self.config!.serviceName, metrics: metrics) { error in
-            // hack for ignoring a offline error
-            if (error as NSError).domain != "NSURLErrorDomain" {
-                self.requestErrorCount += 1
-            }
-            self.onFailPost(activity)
+            self.onFailPost(error, failedActivity: activity)
         }
     }
     
-    func onFailPost(failedActivity: Dictionary<String,Int>) {
+    func onFailPost(error: ErrorType, failedActivity: Dictionary<String,Int>) {
+        // hack for ignoring a offline error
+        if (error as NSError).domain != "NSURLErrorDomain" {
+            self.requestErrorCount += 1
+            if self.requestErrorCount >= AppDelegate.thresholdCountToExit {
+                self.errorAlert("Too many API error. Check key and parmaeters")
+            }
+        }
+        
+        // restore unsent metrics
         self.collector!.mergeCounter(failedActivity)
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+    func applicationWillTerminate(aNotification: NSNotification) {}
+    
+    func errorAlert(message: String) {
+        
+        if self.timer?.valid != nil {
+            timer!.invalidate()
+        }
+        
+        let alert = NSAlert()
+        alert.messageText = "Error in MackerelAppActivity"
+        alert.alertStyle = NSAlertStyle.CriticalAlertStyle
+        alert.informativeText = message
+        alert.addButtonWithTitle("Quit")
+        alert.runModal()
+        self.quit(alert.buttons[0])
     }
 }
 
