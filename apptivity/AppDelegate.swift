@@ -42,7 +42,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-
         do {
             self.config = try ApptivityConfig.init()
         } catch {
@@ -105,7 +104,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(aNotification: NSNotification) {}
     
     func errorAlert(message: String) {
-
         if self.timer?.valid != nil {
             timer!.invalidate()
         }

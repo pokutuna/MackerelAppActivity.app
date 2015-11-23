@@ -61,7 +61,9 @@ class ApptivityCollector: NSObject {
 
     func fetchAndFlush() -> Dictionary<String, Int> {
         let dict = self.counter
-        self.counter = [String:Int]()
+        for (k) in self.counter.keys {
+            self.counter.updateValue(0, forKey: k)
+        }
         return dict
     }
 

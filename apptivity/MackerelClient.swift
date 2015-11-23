@@ -19,7 +19,10 @@ class MackerelClient {
     }
 
     func requestHeader() -> Dictionary<String, String> {
-        return [ "X-Api-Key": self.apiKey, "Content-Type": "application/json" ]
+        return [
+            "X-Api-Key": self.apiKey,
+            "Content-Type": "application/json",
+        ]
     }
 
     func postServiceMetric(serviceName: String, metrics: Array<Dictionary<String, AnyObject>>, onError: ((ErrorType) -> Void)?) {
