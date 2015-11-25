@@ -25,7 +25,7 @@ extension String {
     }
 }
 
-class ApptivityConfig {
+class Config {
 
     static let configFileName = ".mackerel-app-activity.json"
     static let requiredKeys = ["ApiKey", "ServiceName", "MetricPrefix"]
@@ -44,7 +44,7 @@ class ApptivityConfig {
     var postIntervalMinutes: Int {
         get {
             let num = self.configJson["PostIntervalMinutes"].number
-            return num != nil ? Int(num!) : ApptivityConfig.defaultPostIntervalMinutes
+            return num != nil ? Int(num!) : Config.defaultPostIntervalMinutes
         }
     }
     var nameMapping: Dictionary<String,JSON> {
@@ -60,7 +60,7 @@ class ApptivityConfig {
 
     init () throws {
         let path = (NSHomeDirectory() as NSString)
-            .stringByAppendingPathComponent(ApptivityConfig.configFileName)
+            .stringByAppendingPathComponent(Config.configFileName)
         guard NSFileManager.defaultManager().fileExistsAtPath(path) else {
             throw Error.FileNotExist
         }
@@ -77,7 +77,7 @@ class ApptivityConfig {
 
     func validateJson(config: JSON) throws {
         // required keys
-        for key in ApptivityConfig.requiredKeys {
+        for key in Config.requiredKeys {
             guard let _ = config[key].string else {
                 throw Error.RequiredParameterInsufficient(message: key) 
             }

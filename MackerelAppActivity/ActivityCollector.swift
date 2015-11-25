@@ -1,5 +1,5 @@
 //
-//  ApptivityCollector.swift
+//  KeydownCollector.swift
 //  MackerelAppActivity
 //
 //  Created by pokutuna on 2015/11/14.
@@ -8,12 +8,12 @@
 
 import Cocoa
 
-class ApptivityCollector: NSObject {
+class KeydownCollector: NSObject {
 
     static let defaultBundleName = "_none_"
 
     var counter: Dictionary<String, Int> = [String:Int]() // BundleName:KeyDowns
-    var currentBundleName: String = ApptivityCollector.defaultBundleName
+    var currentBundleName: String = KeydownCollector.defaultBundleName
 
     let workspace: NSWorkspace = NSWorkspace.sharedWorkspace()
     var keyDownHandler: AnyObject?
@@ -34,7 +34,7 @@ class ApptivityCollector: NSObject {
     }
 
     func onSwitchApp() {
-        var bundleName = ApptivityCollector.defaultBundleName
+        var bundleName = KeydownCollector.defaultBundleName
         if let app = self.workspace.frontmostApplication {
             if let bi = app.bundleIdentifier {
                 bundleName = bi.characters.split(".").last.flatMap(String.init)!

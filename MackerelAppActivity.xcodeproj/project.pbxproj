@@ -7,129 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FEC8D36AE0E35A769CBE97D /* Pods_MackerelAppActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1CD0538EB4D3DD13FC6F19 /* Pods_MackerelAppActivity.framework */; };
-		B65961EC1BF779DD00B9C15F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961EB1BF779DD00B9C15F /* AppDelegate.swift */; };
-		B65961F01BF779DD00B9C15F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65961EF1BF779DD00B9C15F /* Assets.xcassets */; };
-		B65961F31BF779DD00B9C15F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65961F11BF779DD00B9C15F /* Main.storyboard */; };
-		B65961FB1BF77B2400B9C15F /* ApptivityCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */; };
-		B65961FF1BF7AFE500B9C15F /* MackerelClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65961FE1BF7AFE500B9C15F /* MackerelClient.swift */; };
-		B6ABC7B71BF874B500CE64B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABC7B61BF874B500CE64B0 /* Config.swift */; };
+		B063401C3A4179E9E7F0301F /* Pods_MackerelAppActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0628062983443D3C9D9118 /* Pods_MackerelAppActivity.framework */; };
+		B64310881C05D753001E72B3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64310861C05D753001E72B3 /* MainMenu.xib */; };
+		B666E6851C05D23C00AE4CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666E6841C05D23C00AE4CED /* AppDelegate.swift */; };
+		B666E6871C05D23C00AE4CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B666E6861C05D23C00AE4CED /* Assets.xcassets */; };
+		B666E6941C05D3FB00AE4CED /* ActivityCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666E6911C05D3FB00AE4CED /* ActivityCollector.swift */; };
+		B666E6951C05D3FB00AE4CED /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666E6921C05D3FB00AE4CED /* Config.swift */; };
+		B666E6961C05D3FB00AE4CED /* MackerelClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666E6931C05D3FB00AE4CED /* MackerelClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F1CD0538EB4D3DD13FC6F19 /* Pods_MackerelAppActivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MackerelAppActivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65C514D0D57BF9B2CF843FB3 /* Pods-MackerelAppActivity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MackerelAppActivity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity.debug.xcconfig"; sourceTree = "<group>"; };
-		86C5B8715AB47BF6369F3301 /* Pods-MackerelAppActivity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MackerelAppActivity.release.xcconfig"; path = "Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity.release.xcconfig"; sourceTree = "<group>"; };
-		B65961E81BF779DD00B9C15F /* MackerelAppActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MackerelAppActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B65961EB1BF779DD00B9C15F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B65961EF1BF779DD00B9C15F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B65961F21BF779DD00B9C15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B65961F41BF779DD00B9C15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptivityCollector.swift; sourceTree = "<group>"; };
-		B65961FE1BF7AFE500B9C15F /* MackerelClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MackerelClient.swift; sourceTree = "<group>"; };
-		B6ABC7B61BF874B500CE64B0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0B82178264B275E0CB12E0DA /* Pods-MackerelAppActivity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MackerelAppActivity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity.debug.xcconfig"; sourceTree = "<group>"; };
+		0D11A6F640AB2FCF3F57BB92 /* Pods-MackerelAppActivity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MackerelAppActivity.release.xcconfig"; path = "Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity.release.xcconfig"; sourceTree = "<group>"; };
+		B64310871C05D753001E72B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B666E6811C05D23C00AE4CED /* MackerelAppActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MackerelAppActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B666E6841C05D23C00AE4CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B666E6861C05D23C00AE4CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B666E68B1C05D23C00AE4CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B666E6911C05D3FB00AE4CED /* ActivityCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollector.swift; sourceTree = "<group>"; };
+		B666E6921C05D3FB00AE4CED /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B666E6931C05D3FB00AE4CED /* MackerelClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MackerelClient.swift; sourceTree = "<group>"; };
+		DD0628062983443D3C9D9118 /* Pods_MackerelAppActivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MackerelAppActivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B65961E51BF779DD00B9C15F /* Frameworks */ = {
+		B666E67E1C05D23C00AE4CED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FEC8D36AE0E35A769CBE97D /* Pods_MackerelAppActivity.framework in Frameworks */,
+				B063401C3A4179E9E7F0301F /* Pods_MackerelAppActivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9AFAB7691B4B2118835ECE88 /* Pods */ = {
+		53988D1321B228D144F318D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				65C514D0D57BF9B2CF843FB3 /* Pods-MackerelAppActivity.debug.xcconfig */,
-				86C5B8715AB47BF6369F3301 /* Pods-MackerelAppActivity.release.xcconfig */,
+				DD0628062983443D3C9D9118 /* Pods_MackerelAppActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92629F8427D9084964AF04A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B82178264B275E0CB12E0DA /* Pods-MackerelAppActivity.debug.xcconfig */,
+				0D11A6F640AB2FCF3F57BB92 /* Pods-MackerelAppActivity.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B65961DF1BF779DC00B9C15F = {
+		B666E6781C05D23C00AE4CED = {
 			isa = PBXGroup;
 			children = (
-				B65961EA1BF779DD00B9C15F /* apptivity */,
-				B65961E91BF779DD00B9C15F /* Products */,
-				9AFAB7691B4B2118835ECE88 /* Pods */,
-				CE7D0C9E05432F51BBD6E249 /* Frameworks */,
+				B666E6831C05D23C00AE4CED /* MackerelAppActivity */,
+				B666E6821C05D23C00AE4CED /* Products */,
+				92629F8427D9084964AF04A3 /* Pods */,
+				53988D1321B228D144F318D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B65961E91BF779DD00B9C15F /* Products */ = {
+		B666E6821C05D23C00AE4CED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B65961E81BF779DD00B9C15F /* MackerelAppActivity.app */,
+				B666E6811C05D23C00AE4CED /* MackerelAppActivity.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B65961EA1BF779DD00B9C15F /* apptivity */ = {
+		B666E6831C05D23C00AE4CED /* MackerelAppActivity */ = {
 			isa = PBXGroup;
 			children = (
-				B65961EB1BF779DD00B9C15F /* AppDelegate.swift */,
-				B65961FE1BF7AFE500B9C15F /* MackerelClient.swift */,
-				B65961FA1BF77B2400B9C15F /* ApptivityCollector.swift */,
-				B6ABC7B61BF874B500CE64B0 /* Config.swift */,
-				B65961EF1BF779DD00B9C15F /* Assets.xcassets */,
-				B65961F11BF779DD00B9C15F /* Main.storyboard */,
-				B65961F41BF779DD00B9C15F /* Info.plist */,
+				B666E6841C05D23C00AE4CED /* AppDelegate.swift */,
+				B666E6861C05D23C00AE4CED /* Assets.xcassets */,
+				B666E6911C05D3FB00AE4CED /* ActivityCollector.swift */,
+				B666E6921C05D3FB00AE4CED /* Config.swift */,
+				B666E6931C05D3FB00AE4CED /* MackerelClient.swift */,
+				B666E68B1C05D23C00AE4CED /* Info.plist */,
+				B64310861C05D753001E72B3 /* MainMenu.xib */,
 			);
-			path = apptivity;
-			sourceTree = "<group>";
-		};
-		CE7D0C9E05432F51BBD6E249 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3F1CD0538EB4D3DD13FC6F19 /* Pods_MackerelAppActivity.framework */,
-			);
-			name = Frameworks;
+			path = MackerelAppActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B65961E71BF779DD00B9C15F /* MackerelAppActivity */ = {
+		B666E6801C05D23C00AE4CED /* MackerelAppActivity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B65961F71BF779DD00B9C15F /* Build configuration list for PBXNativeTarget "MackerelAppActivity" */;
+			buildConfigurationList = B666E68E1C05D23C00AE4CED /* Build configuration list for PBXNativeTarget "MackerelAppActivity" */;
 			buildPhases = (
-				BAB303A300109768D687E367 /* Check Pods Manifest.lock */,
-				B65961E41BF779DD00B9C15F /* Sources */,
-				B65961E51BF779DD00B9C15F /* Frameworks */,
-				B65961E61BF779DD00B9C15F /* Resources */,
-				9307B9F94E8D88C65AE505BA /* Embed Pods Frameworks */,
-				13288AD8D6D89CCB45D08439 /* Copy Pods Resources */,
+				B961730E8E2116C84840DB0C /* Check Pods Manifest.lock */,
+				B666E67D1C05D23C00AE4CED /* Sources */,
+				B666E67E1C05D23C00AE4CED /* Frameworks */,
+				B666E67F1C05D23C00AE4CED /* Resources */,
+				CE7AA5E4AE5334F6735542BD /* Embed Pods Frameworks */,
+				FE5B62A71B12FBC5A9113FE4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MackerelAppActivity;
-			productName = apptivity;
-			productReference = B65961E81BF779DD00B9C15F /* MackerelAppActivity.app */;
+			productName = MackerelAppActivity;
+			productReference = B666E6811C05D23C00AE4CED /* MackerelAppActivity.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B65961E01BF779DC00B9C15F /* Project object */ = {
+		B666E6791C05D23C00AE4CED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = pokutuna;
 				TargetAttributes = {
-					B65961E71BF779DD00B9C15F = {
+					B666E6801C05D23C00AE4CED = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
 			};
-			buildConfigurationList = B65961E31BF779DC00B9C15F /* Build configuration list for PBXProject "MackerelAppActivity" */;
+			buildConfigurationList = B666E67C1C05D23C00AE4CED /* Build configuration list for PBXProject "MackerelAppActivity" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -137,60 +137,30 @@
 				en,
 				Base,
 			);
-			mainGroup = B65961DF1BF779DC00B9C15F;
-			productRefGroup = B65961E91BF779DD00B9C15F /* Products */;
+			mainGroup = B666E6781C05D23C00AE4CED;
+			productRefGroup = B666E6821C05D23C00AE4CED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B65961E71BF779DD00B9C15F /* MackerelAppActivity */,
+				B666E6801C05D23C00AE4CED /* MackerelAppActivity */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B65961E61BF779DD00B9C15F /* Resources */ = {
+		B666E67F1C05D23C00AE4CED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65961F01BF779DD00B9C15F /* Assets.xcassets in Resources */,
-				B65961F31BF779DD00B9C15F /* Main.storyboard in Resources */,
+				B666E6871C05D23C00AE4CED /* Assets.xcassets in Resources */,
+				B64310881C05D753001E72B3 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13288AD8D6D89CCB45D08439 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9307B9F94E8D88C65AE505BA /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BAB303A300109768D687E367 /* Check Pods Manifest.lock */ = {
+		B961730E8E2116C84840DB0C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,35 +175,65 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		CE7AA5E4AE5334F6735542BD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5B62A71B12FBC5A9113FE4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MackerelAppActivity/Pods-MackerelAppActivity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B65961E41BF779DD00B9C15F /* Sources */ = {
+		B666E67D1C05D23C00AE4CED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65961FF1BF7AFE500B9C15F /* MackerelClient.swift in Sources */,
-				B6ABC7B71BF874B500CE64B0 /* Config.swift in Sources */,
-				B65961FB1BF77B2400B9C15F /* ApptivityCollector.swift in Sources */,
-				B65961EC1BF779DD00B9C15F /* AppDelegate.swift in Sources */,
+				B666E6941C05D3FB00AE4CED /* ActivityCollector.swift in Sources */,
+				B666E6851C05D23C00AE4CED /* AppDelegate.swift in Sources */,
+				B666E6961C05D3FB00AE4CED /* MackerelClient.swift in Sources */,
+				B666E6951C05D3FB00AE4CED /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B65961F11BF779DD00B9C15F /* Main.storyboard */ = {
+		B64310861C05D753001E72B3 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B65961F21BF779DD00B9C15F /* Base */,
+				B64310871C05D753001E72B3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B65961F51BF779DD00B9C15F /* Debug */ = {
+		B666E68C1C05D23C00AE4CED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,7 +277,7 @@
 			};
 			name = Debug;
 		};
-		B65961F61BF779DD00B9C15F /* Release */ = {
+		B666E68D1C05D23C00AE4CED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -313,54 +313,54 @@
 			};
 			name = Release;
 		};
-		B65961F81BF779DD00B9C15F /* Debug */ = {
+		B666E68F1C05D23C00AE4CED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65C514D0D57BF9B2CF843FB3 /* Pods-MackerelAppActivity.debug.xcconfig */;
+			baseConfigurationReference = 0B82178264B275E0CB12E0DA /* Pods-MackerelAppActivity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = apptivity/Info.plist;
+				INFOPLIST_FILE = MackerelAppActivity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pokutuna.apptivity;
-				PRODUCT_NAME = MackerelAppActivity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pokutuna.MackerelAppActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B65961F91BF779DD00B9C15F /* Release */ = {
+		B666E6901C05D23C00AE4CED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86C5B8715AB47BF6369F3301 /* Pods-MackerelAppActivity.release.xcconfig */;
+			baseConfigurationReference = 0D11A6F640AB2FCF3F57BB92 /* Pods-MackerelAppActivity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = apptivity/Info.plist;
+				INFOPLIST_FILE = MackerelAppActivity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pokutuna.apptivity;
-				PRODUCT_NAME = MackerelAppActivity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pokutuna.MackerelAppActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B65961E31BF779DC00B9C15F /* Build configuration list for PBXProject "MackerelAppActivity" */ = {
+		B666E67C1C05D23C00AE4CED /* Build configuration list for PBXProject "MackerelAppActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B65961F51BF779DD00B9C15F /* Debug */,
-				B65961F61BF779DD00B9C15F /* Release */,
+				B666E68C1C05D23C00AE4CED /* Debug */,
+				B666E68D1C05D23C00AE4CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B65961F71BF779DD00B9C15F /* Build configuration list for PBXNativeTarget "MackerelAppActivity" */ = {
+		B666E68E1C05D23C00AE4CED /* Build configuration list for PBXNativeTarget "MackerelAppActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B65961F81BF779DD00B9C15F /* Debug */,
-				B65961F91BF779DD00B9C15F /* Release */,
+				B666E68F1C05D23C00AE4CED /* Debug */,
+				B666E6901C05D23C00AE4CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B65961E01BF779DC00B9C15F /* Project object */;
+	rootObject = B666E6791C05D23C00AE4CED /* Project object */;
 }

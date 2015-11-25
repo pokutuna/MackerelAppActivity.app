@@ -12,8 +12,8 @@ import AppKit
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var config: ApptivityConfig?
-    var collector: ApptivityCollector?
+    var config: Config?
+    var collector: KeydownCollector?
     var mackerel: MackerelClient?
 
     var timer: NSTimer?
@@ -43,11 +43,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         do {
-            self.config = try ApptivityConfig.init()
+            self.config = try Config.init()
         } catch {
             self.errorAlert("Config." + String(error))
         }
-        self.collector = ApptivityCollector.init()
+        self.collector = KeydownCollector.init()
         self.mackerel  = MackerelClient.init(apiKey: self.config!.apiKey)
 
         self.runTimer()

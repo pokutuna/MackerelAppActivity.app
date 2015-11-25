@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/pokutuna/Desktop/apptivity/MackerelAppActivity.xcodeproj">
+      location = "self:MackerelAppActivity.xcodeproj">
    </FileRef>
 </Workspace>
