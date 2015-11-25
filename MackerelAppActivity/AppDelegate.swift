@@ -28,10 +28,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusItem.image = NSImage(named: "SabakunTemplate")
         self.statusItem.menu = menu
 
-        let menuItem = NSMenuItem()
-        menuItem.title = "Quit"
-        menuItem.action = Selector("quit:")
-        menu.addItem(menuItem)
+        let versionMenuItem = NSMenuItem()
+        versionMenuItem.title = "Version: " + self.getVersion()
+        menu.addItem(versionMenuItem)
+
+        let quitMenuItem = NSMenuItem()
+        quitMenuItem.title = "Quit"
+        quitMenuItem.action = Selector("quit:")
+        menu.addItem(quitMenuItem)
+    }
+
+    func getVersion() -> String {
+        return NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
     }
     
     @IBAction func quit(sender: NSButton) {
