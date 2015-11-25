@@ -23,18 +23,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
 
-    override init() {
-
+    func initStatusItem() {
         let menu = NSMenu()
-        self.statusItem.title = "ま"
+        self.statusItem.image = NSImage(named: "SabakunTemplate")
         self.statusItem.menu = menu
 
         let menuItem = NSMenuItem()
         menuItem.title = "Quit"
         menuItem.action = Selector("quit:")
         menu.addItem(menuItem)
-
-        super.init()
     }
     
     @IBAction func quit(sender: NSButton) {
@@ -42,6 +39,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        self.initStatusItem()
+
         do {
             self.config = try Config.init()
         } catch {

@@ -14,6 +14,7 @@
 		B666E6941C05D3FB00AE4CED /* ActivityCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666E6911C05D3FB00AE4CED /* ActivityCollector.swift */; };
 		B666E6951C05D3FB00AE4CED /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666E6921C05D3FB00AE4CED /* Config.swift */; };
 		B666E6961C05D3FB00AE4CED /* MackerelClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666E6931C05D3FB00AE4CED /* MackerelClient.swift */; };
+		B6CECBAC1C060467007CEA7D /* SabakunTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = B6CECBAB1C060467007CEA7D /* SabakunTemplate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B666E6911C05D3FB00AE4CED /* ActivityCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollector.swift; sourceTree = "<group>"; };
 		B666E6921C05D3FB00AE4CED /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B666E6931C05D3FB00AE4CED /* MackerelClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MackerelClient.swift; sourceTree = "<group>"; };
+		B6CECBAB1C060467007CEA7D /* SabakunTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SabakunTemplate.png; sourceTree = SOURCE_ROOT; };
 		DD0628062983443D3C9D9118 /* Pods_MackerelAppActivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MackerelAppActivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		B666E6831C05D23C00AE4CED /* MackerelAppActivity */ = {
 			isa = PBXGroup;
 			children = (
+				B6CECBAB1C060467007CEA7D /* SabakunTemplate.png */,
 				B666E6841C05D23C00AE4CED /* AppDelegate.swift */,
 				B666E6861C05D23C00AE4CED /* Assets.xcassets */,
 				B666E6911C05D3FB00AE4CED /* ActivityCollector.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6CECBAC1C060467007CEA7D /* SabakunTemplate.png in Resources */,
 				B666E6871C05D23C00AE4CED /* Assets.xcassets in Resources */,
 				B64310881C05D753001E72B3 /* MainMenu.xib in Resources */,
 			);
