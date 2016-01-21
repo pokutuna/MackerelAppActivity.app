@@ -46,3 +46,8 @@ OS X requires `Accessibility` for monitoring global key events.
 - check its checkbox
 
 ![goal](https://raw.githubusercontent.com/pokutuna/MackerelAppActivity.app/master/resources/accessibility.png)
+
+
+### ...Or Using Homebrew Cask
+
+https://github.com/aereal/homebrew-mackerelappactivity
